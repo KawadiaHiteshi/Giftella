@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giftella — Luxury Gift Store</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <canvas id="heartsCanvas" aria-hidden="true"></canvas>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <div class="topbar">
+    <p>Free shipping on orders over $59 • Valentine's Sale live ♥</p>
+  </div>
+
+  <header class="header" id="top">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark">Giftella</span>
+        <span class="brand-sub">love-worthy gifts</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#categories">Categories</a>
+        <a href="#new">New</a>
+        <a href="#occasions">Occasions</a>
+        <a href="#best">Best Sellers</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+          <button class="pill" id="toggleHearts" type="button">♥ Hearts</button>
+          <button class="pill" id="openCart" type="button" aria-label="Open cart">Cart <span class="cart-badge" id="cartCount">0</span></button>
+
+        <button class="pill" id="toggleHearts" aria-label="Toggle hearts">♥ Hearts</button>
+        <a class="pill" href="#categories">Shop</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
+    </div>
+
+    
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#categories">Categories</a>
+  <a href="#chocolates">Chocolates</a>
+  <a href="#flowers">Flowers</a>
+  <a href="#cakes">Cakes</a>
+  <a href="#balloons">Balloons</a>
+  <a href="#hampers">Hampers</a>
+  <a href="#jewelry">Jewelry</a>
+  <a href="#contact">Contact</a>
+</div>
+
+  </header>
+
+  <section class="hero">
+    <div class="hero-media" aria-hidden="true">
+      <img src="images/hero.jpg" alt="Valentine's gifts banner">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content reveal">
+      <p class="hero-kicker">Gifts for Every Occasion • Curated Daily</p>
+      <h1 class="hero-title">Gifts that feel like<br/>a love letter.</h1>
+      <p class="hero-subtitle">
+        Curated picks for her, him, boyfriend, girlfriend — plus balloons, cakes,
+        flowers, hampers and occasion gifts.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#categories">Shop Categories</a>
+        <a class="btn ghost" href="#best">Best Sellers</a>
+      </div>
+
+      <div class="hero-chips">
+        <a class="chip" href="#occasions">Birthday</a>
+        <a class="chip" href="#occasions">Anniversary</a>
+        <a class="chip" href="#occasions">Valentine's</a>
+        <a class="chip" href="#occasions">Congratulations</a>
+      </div>
+    </div>
+  </section>
+
+  
+<section class="section alt" id="categories">
+  <div class="section-head reveal">
+    <h2 class="section-title">Shop by Category</h2>
+    <span class="section-underline"></span>
+  </div>
+
+  <div class="category-grid reveal">
+    <a class="cat-card" href="#flowers" aria-label="Shop Flowers">
+      <img src="images/cat-flowers.jpg" alt="Flowers" />
+      <div class="cat-overlay">
+        <h3>Flowers</h3><p>bouquets & blooms →</p>
+      </div>
+    </a>
+    <a class="cat-card" href="#cakes" aria-label="Shop Cakes">
+      <img src="images/cat-cakes.jpg" alt="Cakes" />
+      <div class="cat-overlay">
+        <h3>Cakes</h3><p>sweet surprises →</p>
+      </div>
+    </a>
+    <a class="cat-card" href="#balloons" aria-label="Shop Balloons">
+      <img src="images/cat-balloons.jpg" alt="Balloons" />
+      <div class="cat-overlay">
+        <h3>Balloons</h3><p>party vibes →</p>
+      </div>
+    </a>
+    <a class="cat-card" href="#chocolates" aria-label="Shop Chocolates">
+      <img src="images/p7.jpg" alt="Chocolates" />
+      <div class="cat-overlay">
+        <h3>Chocolates</h3><p>heart boxes →</p>
+      </div>
+    </a>
+
+    <a class="cat-card" href="#hampers" aria-label="Shop Hampers">
+      <img src="images/cat-hampers.jpg" alt="Hampers" />
+      <div class="cat-overlay">
+        <h3>Hampers</h3><p>curated gifts →</p>
+      </div>
+    </a>
+    <a class="cat-card" href="#jewelry" aria-label="Shop Jewelry">
+      <img src="images/cat-women.jpg" alt="Jewelry" />
+      <div class="cat-overlay">
+        <h3>Jewelry</h3><p>sparkle & shine →</p>
+      </div>
+    </a>
+    <a class="cat-card" href="#for-him" aria-label="Gifts for Him">
+      <img src="images/cat-men.jpg" alt="Gifts for him" />
+      <div class="cat-overlay">
+        <h3>For Him</h3><p>bold picks →</p>
+      </div>
+    </a>
+    <a class="cat-card" href="#for-her" aria-label="Gifts for Her">
+      <img src="images/cat-gf.jpg" alt="Gifts for her" />
+      <div class="cat-overlay">
+        <h3>For Her</h3><p>romantic picks →</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="section" id="flowers">
+  <div class="section-head reveal">
+    <h2 class="section-title">Flowers</h2>
+    <span class="section-underline"></span>
+  </div>
+  <div class="products reveal">
+    <article class="product" data-category="flowers" data-name="White Lily Bouquet" data-price="35" data-image="images/p1.jpg">
+      <div class="product-img"><img src="images/p1.jpg" alt="White Lily Bouquet" /></div>
+      <div class="product-name">White Lily Bouquet</div>
+      <div class="product-price">$35</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="flowers" data-name="Pink Tulip Wrap" data-price="42" data-image="images/p3.jpg">
+      <div class="product-img"><img src="images/p3.jpg" alt="Pink Tulip Wrap" /></div>
+      <div class="product-name">Pink Tulip Wrap</div>
+      <div class="product-price">$42</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="flowers" data-name="Roses & Cake Combo" data-price="59" data-image="images/p2.jpg">
+      <div class="product-img"><img src="images/p2.jpg" alt="Roses & Cake Combo" /></div>
+      <div class="product-name">Roses & Cake Combo</div>
+      <div class="product-price">$59</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="flowers" data-name="Birthday Tulip Set" data-price="45" data-image="images/cat-occasions.jpg">
+      <div class="product-img"><img src="images/cat-occasions.jpg" alt="Birthday Tulip Set" /></div>
+      <div class="product-name">Birthday Tulip Set</div>
+      <div class="product-price">$45</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+  </div>
+</section>
+
+<section class="section alt" id="cakes">
+  <div class="section-head reveal">
+    <h2 class="section-title">Cakes</h2>
+    <span class="section-underline"></span>
+  </div>
+  <div class="products reveal">
+    <article class="product" data-category="cakes" data-name="Floral Cream Cake" data-price="39" data-image="images/p5.jpg">
+      <div class="product-img"><img src="images/p5.jpg" alt="Floral Cream Cake" /></div>
+      <div class="product-name">Floral Cream Cake</div>
+      <div class="product-price">$39</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="cakes" data-name="Heart Love Cake" data-price="49" data-image="images/p2.jpg">
+      <div class="product-img"><img src="images/p2.jpg" alt="Heart Love Cake" /></div>
+      <div class="product-name">Heart Love Cake</div>
+      <div class="product-price">$49</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="cakes" data-name="Birthday Pink Cake" data-price="44" data-image="images/cat-occasions.jpg">
+      <div class="product-img"><img src="images/cat-occasions.jpg" alt="Birthday Pink Cake" /></div>
+      <div class="product-name">Birthday Pink Cake</div>
+      <div class="product-price">$44</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="cakes" data-name="Mini Celebration Cake" data-price="29" data-image="images/p5.jpg">
+      <div class="product-img"><img src="images/p5.jpg" alt="Mini Celebration Cake" /></div>
+      <div class="product-name">Mini Celebration Cake</div>
+      <div class="product-price">$29</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="balloons">
+  <div class="section-head reveal">
+    <h2 class="section-title">Balloons</h2>
+    <span class="section-underline"></span>
+  </div>
+  <div class="products reveal">
+    <article class="product" data-category="balloons" data-name="Pink Heart Balloon Bouquet" data-price="22" data-image="images/p3.jpg">
+      <div class="product-img"><img src="images/p3.jpg" alt="Pink Heart Balloon Bouquet" /></div>
+      <div class="product-name">Pink Heart Balloon Bouquet</div>
+      <div class="product-price">$22</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="balloons" data-name="Red Love Balloon Set" data-price="24" data-image="images/p6.jpg">
+      <div class="product-img"><img src="images/p6.jpg" alt="Red Love Balloon Set" /></div>
+      <div class="product-name">Red Love Balloon Set</div>
+      <div class="product-price">$24</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="balloons" data-name="I Love You Balloon" data-price="29" data-image="images/cat-bf.jpg">
+      <div class="product-img"><img src="images/cat-bf.jpg" alt="I Love You Balloon" /></div>
+      <div class="product-name">I Love You Balloon</div>
+      <div class="product-price">$29</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="balloons" data-name="Valentine Surprise Balloon" data-price="27" data-image="images/p6.jpg">
+      <div class="product-img"><img src="images/p6.jpg" alt="Valentine Surprise Balloon" /></div>
+      <div class="product-name">Valentine Surprise Balloon</div>
+      <div class="product-price">$27</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+  </div>
+</section>
+
+<section class="section alt" id="chocolates">
+  <div class="section-head reveal">
+    <h2 class="section-title">Chocolates</h2>
+    <span class="section-underline"></span>
+  </div>
+  <div class="products reveal">
+    <article class="product" data-category="chocolates" data-name="Ferrero Heart Box" data-price="45" data-image="images/p4.jpg">
+      <div class="product-img"><img src="images/p4.jpg" alt="Ferrero Heart Box" /></div>
+      <div class="product-name">Ferrero Heart Box</div>
+      <div class="product-price">$45</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="chocolates" data-name="Luxury Heart Chocolates" data-price="79" data-image="images/p7.jpg">
+      <div class="product-img"><img src="images/p7.jpg" alt="Luxury Heart Chocolates" /></div>
+      <div class="product-name">Luxury Heart Chocolates</div>
+      <div class="product-price">$79</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="chocolates" data-name="Pastel Heart Chocolate Box" data-price="39" data-image="images/p8.jpg">
+      <div class="product-img"><img src="images/p8.jpg" alt="Pastel Heart Chocolate Box" /></div>
+      <div class="product-name">Pastel Heart Chocolate Box</div>
+      <div class="product-price">$39</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="chocolates" data-name="Assorted Heart Truffles" data-price="34" data-image="images/p7.jpg">
+      <div class="product-img"><img src="images/p7.jpg" alt="Assorted Heart Truffles" /></div>
+      <div class="product-name">Assorted Heart Truffles</div>
+      <div class="product-price">$34</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="hampers">
+  <div class="section-head reveal">
+    <h2 class="section-title">Hampers</h2>
+    <span class="section-underline"></span>
+  </div>
+  <div class="products reveal">
+    <article class="product" data-category="hampers" data-name="Curated Gift Hamper" data-price="79" data-image="images/cat-hampers.jpg">
+      <div class="product-img"><img src="images/cat-hampers.jpg" alt="Curated Gift Hamper" /></div>
+      <div class="product-name">Curated Gift Hamper</div>
+      <div class="product-price">$79</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="hampers" data-name="Choco + Roses Hamper" data-price="89" data-image="images/p2.jpg">
+      <div class="product-img"><img src="images/p2.jpg" alt="Choco + Roses Hamper" /></div>
+      <div class="product-name">Choco + Roses Hamper</div>
+      <div class="product-price">$89</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="hampers" data-name="Self‑Care Hamper" data-price="69" data-image="images/cat-hampers.jpg">
+      <div class="product-img"><img src="images/cat-hampers.jpg" alt="Self Care Hamper" /></div>
+      <div class="product-name">Self‑Care Hamper</div>
+      <div class="product-price">$69</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="hampers" data-name="Luxury Valentine Hamper" data-price="99" data-image="images/cat-hampers.jpg">
+      <div class="product-img"><img src="images/cat-hampers.jpg" alt="Luxury Valentine Hamper" /></div>
+      <div class="product-name">Luxury Valentine Hamper</div>
+      <div class="product-price">$99</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+  </div>
+</section>
+
+<section class="section alt" id="jewelry">
+  <div class="section-head reveal">
+    <h2 class="section-title">Jewelry</h2>
+    <span class="section-underline"></span>
+  </div>
+  <div class="products reveal">
+    <article class="product" data-category="jewelry" data-name="Sparkle Ring Set" data-price="129" data-image="images/cat-women.jpg">
+      <div class="product-img"><img src="images/cat-women.jpg" alt="Sparkle Ring Set" /></div>
+      <div class="product-name">Sparkle Ring Set</div>
+      <div class="product-price">$129</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="jewelry" data-name="Heart Pendant" data-price="59" data-image="images/cat-gf.jpg">
+      <div class="product-img"><img src="images/cat-gf.jpg" alt="Heart Pendant" /></div>
+      <div class="product-name">Heart Pendant</div>
+      <div class="product-price">$59</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="jewelry" data-name="Gold Heart Necklace" data-price="79" data-image="images/p4.jpg">
+      <div class="product-img"><img src="images/p4.jpg" alt="Gold Heart Necklace" /></div>
+      <div class="product-name">Gold Heart Necklace</div>
+      <div class="product-price">$79</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="jewelry" data-name="Couple Jewelry Box" data-price="69" data-image="images/cat-women.jpg">
+      <div class="product-img"><img src="images/cat-women.jpg" alt="Couple Jewelry Box" /></div>
+      <div class="product-name">Couple Jewelry Box</div>
+      <div class="product-price">$69</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="for-him">
+  <div class="section-head reveal">
+    <h2 class="section-title">For Him</h2>
+    <span class="section-underline"></span>
+  </div>
+  <div class="products reveal">
+    <article class="product" data-category="for-him" data-name="Classic Chocolate Hearts" data-price="34" data-image="images/cat-men.jpg">
+      <div class="product-img"><img src="images/cat-men.jpg" alt="Classic Chocolate Hearts" /></div>
+      <div class="product-name">Classic Chocolate Hearts</div>
+      <div class="product-price">$34</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="for-him" data-name="Bold Love Balloon" data-price="29" data-image="images/cat-bf.jpg">
+      <div class="product-img"><img src="images/cat-bf.jpg" alt="Bold Love Balloon" /></div>
+      <div class="product-name">Bold Love Balloon</div>
+      <div class="product-price">$29</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="for-him" data-name="Chocolate + Cake Combo" data-price="79" data-image="images/p2.jpg">
+      <div class="product-img"><img src="images/p2.jpg" alt="Chocolate + Cake Combo" /></div>
+      <div class="product-name">Chocolate + Cake Combo</div>
+      <div class="product-price">$79</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="for-him" data-name="Luxury Gift Hamper" data-price="99" data-image="images/cat-hampers.jpg">
+      <div class="product-img"><img src="images/cat-hampers.jpg" alt="Luxury Gift Hamper" /></div>
+      <div class="product-name">Luxury Gift Hamper</div>
+      <div class="product-price">$99</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+  </div>
+</section>
+
+<section class="section alt" id="for-her">
+  <div class="section-head reveal">
+    <h2 class="section-title">For Her</h2>
+    <span class="section-underline"></span>
+  </div>
+  <div class="products reveal">
+    <article class="product" data-category="for-her" data-name="Heart Pendant" data-price="59" data-image="images/cat-gf.jpg">
+      <div class="product-img"><img src="images/cat-gf.jpg" alt="Heart Pendant" /></div>
+      <div class="product-name">Heart Pendant</div>
+      <div class="product-price">$59</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="for-her" data-name="Pink Heart Chocolates" data-price="39" data-image="images/p8.jpg">
+      <div class="product-img"><img src="images/p8.jpg" alt="Pink Heart Chocolates" /></div>
+      <div class="product-name">Pink Heart Chocolates</div>
+      <div class="product-price">$39</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="for-her" data-name="Flowers + Cake Surprise" data-price="89" data-image="images/p2.jpg">
+      <div class="product-img"><img src="images/p2.jpg" alt="Flowers + Cake Surprise" /></div>
+      <div class="product-name">Flowers + Cake Surprise</div>
+      <div class="product-price">$89</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+    <article class="product" data-category="for-her" data-name="Pink Balloon Bouquet" data-price="22" data-image="images/p3.jpg">
+      <div class="product-img"><img src="images/p3.jpg" alt="Pink Balloon Bouquet" /></div>
+      <div class="product-name">Pink Balloon Bouquet</div>
+      <div class="product-price">$22</div>
+      <button class="add" data-action="add">Add to cart</button>
+    </article>
+  </div>
+</section>
+
+<section class="banner" id="best">
+    <div class="banner-media" aria-hidden="true">
+      <img src="images/p6.jpg" alt="Collection banner">
+    </div>
+    <div class="banner-overlay"></div>
+    <div class="banner-content reveal">
+      <p class="banner-kicker">Best Sellers</p>
+      <h2 class="banner-title">COLLECTION</h2>
+      <a class="btn outline" href="#best-grid">VIEW</a>
+    </div>
+  </section>
+
+  <section class="section" id="best-grid">
+    <div class="three-grid">
+      <div class="tile reveal"><img src="images/p5.jpg" alt="Floral Cream Cake"></div>
+      <div class="tile reveal"><img src="images/p8.jpg" alt="Curated Gift Hamper"></div>
+      <div class="copy reveal">
+        <h3>Made for every moment</h3>
+        <span class="mini-underline"></span>
+        <p>
+          From romantic edits to birthday surprises — pick a gift that feels personal.
+          Add balloons, flowers or a cake to complete the moment.
+        </p>
+        <div class="copy-actions">
+          <a class="btn primary" href="#categories">Shop All</a>
+          <a class="btn ghost" href="#contact">Need help?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="footer-wrap">
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="#">Our Story</a>
+        <a href="#">Gift Guide</a>
+        <a href="#">Membership</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Service</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">Delivery Options</a>
+        <a href="#">Payment Methods</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Call Us</h4>
+        <p class="footer-text">Tel / +1 (857) 230-2040</p>
+        <p class="footer-text">Time / 9 AM - 8 PM</p>
+        <p class="footer-text">Email / hello@giftella.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Privacy Policy | Terms & Conditions | © 2026 Giftella</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+<!-- Cart Drawer -->
+<div class="drawer" id="cartDrawer" aria-hidden="true">
+  <div class="drawer-overlay" data-close="cart"></div>
+  <aside class="drawer-panel" role="dialog" aria-label="Shopping cart">
+    <div class="drawer-head">
+      <div>
+        <div class="drawer-title">Your Cart</div>
+        <div class="drawer-sub" id="cartSub">0 items</div>
+      </div>
+      <button class="icon-btn" data-close="cart" aria-label="Close cart">✕</button>
+    </div>
+
+    <div class="drawer-body" id="cartItems"></div>
+
+    <div class="drawer-foot">
+      <div class="discount-row">
+        <input class="input" id="couponInput" placeholder="Coupon code (LOVE10)" />
+        <button class="btn" id="applyCoupon" type="button">Apply</button>
+      </div>
+
+      <div class="totals">
+        <div class="tot-line"><span>Subtotal</span><span id="subTotal">$0.00</span></div>
+        <div class="tot-line"><span>Discount</span><span id="discountLine">-$0.00</span></div>
+        <div class="tot-line grand"><span>Total</span><span id="grandTotal">$0.00</span></div>
+      </div>
+
+      <button class="btn primary" id="checkoutBtn" type="button">Checkout</button>
+      <button class="btn" id="clearCart" type="button">Clear cart</button>
+    </div>
+  </aside>
+</div>
+
+<!-- Checkout Modal -->
+<div class="modal" id="checkoutModal" aria-hidden="true">
+  <div class="modal-overlay" data-close="checkout"></div>
+  <div class="modal-panel" role="dialog" aria-label="Checkout">
+    <div class="modal-head">
+      <div>
+        <div class="drawer-title">Checkout</div>
+        <div class="drawer-sub">Confirm delivery details</div>
+      </div>
+      <button class="icon-btn" data-close="checkout" aria-label="Close checkout">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="checkout-grid">
+        <form id="checkoutForm" class="form">
+          <label class="label">Full Name</label>
+          <input class="input" required name="name" placeholder="Your name" />
+
+          <label class="label">Email</label>
+          <input class="input" required type="email" name="email" placeholder="you@email.com" />
+
+          <label class="label">Phone</label>
+          <input class="input" required name="phone" placeholder="(555) 555-5555" />
+
+          <label class="label">Address</label>
+          <input class="input" required name="address" placeholder="Street, city, state, zip" />
+
+          <label class="label">Delivery Note (optional)</label>
+          <textarea class="input textarea" name="note" placeholder="e.g., leave at door, call on arrival"></textarea>
+
+          <button class="btn primary" type="submit">Place Order</button>
+          <div class="small" id="orderMsg"></div>
+        </form>
+
+        <div class="summary">
+          <div class="sum-title">Order Summary</div>
+          <div id="summaryItems" class="sum-items"></div>
+          <div class="totals">
+            <div class="tot-line"><span>Subtotal</span><span id="sumSub">$0.00</span></div>
+            <div class="tot-line"><span>Discount</span><span id="sumDisc">-$0.00</span></div>
+            <div class="tot-line grand"><span>Total</span><span id="sumTotal">$0.00</span></div>
+          </div>
+          <div class="small">This is a demo checkout (no real payment). ✅</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Discount Popup -->
+<div class="popup" id="discountPopup" aria-hidden="true">
+  <div class="popup-card">
+    <button class="icon-btn close" data-close="discount" aria-label="Close popup">✕</button>
+    <div class="pop-kicker">Limited time</div>
+    <div class="pop-title">Valentine Discount 💝</div>
+    <div class="pop-text">Use code <b>LOVE10</b> to get <b>10% off</b> chocolates, flowers & cakes.</div>
+    <div class="pop-actions">
+      <button class="btn primary" id="useLove10" type="button">Apply LOVE10</button>
+      <button class="btn" data-close="discount" type="button">Not now</button>
+    </div>
+  </div>
+</div>
+
+<!-- Valentine Ideas Popup -->
+<div class="popup" id="ideasPopup" aria-hidden="true">
+  <div class="popup-card">
+    <button class="icon-btn close" data-close="ideas" aria-label="Close popup">✕</button>
+    <div class="pop-kicker">Need inspiration?</div>
+    <div class="pop-title">Valentine Day Ideas 🌹</div>
+    <ul class="ideas">
+      <li><b>Classic:</b> Roses + Heart Cake + Chocolates</li>
+      <li><b>Surprise:</b> Balloon Bouquet + Mini Cake</li>
+      <li><b>Luxury:</b> Curated Hamper + Jewelry</li>
+      <li><b>Sweet:</b> Pastel Heart Chocolates + Lily Bouquet</li>
+    </ul>
+    <div class="pop-actions">
+      <a class="btn primary" href="#chocolates" data-close="ideas">Shop Chocolates</a>
+      <a class="btn" href="#flowers" data-close="ideas">Shop Flowers</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
